@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #Copyright 2017 deerf, this code is under GPLv3
-import telebot, time, urllib, configparser, emoji
+import telebot, time, urllib, emoji
 from telebot import types
 
 def long_url(text):
