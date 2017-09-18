@@ -14,7 +14,7 @@ bot = telebot.TeleBot('TOKEN')
 def query_text(inline_query):
     try:
         print(str(inline_query.from_user.id) + ' ' + inline_query.query)
-        l_url = types.InlineQueryResultArticle('long_url', 'Long url', types.InputTextMessageContent(emoji.emojize(':mag: searching...\n',use_aliases=True)+long_url(inline_query.query)),description=emoji.emojize(':mag: Search anythings: inline_query.query',use_aliases=True))
+        l_url = types.InlineQueryResultArticle('long_url', 'Long url', types.InputTextMessageContent(emoji.emojize(':mag: searching...\n',use_aliases=True)+long_url(inline_query.query)),description=emoji.emojize(':mag: Search anythings:'+inline_query.query,use_aliases=True))
         bot.answer_inline_query(inline_query.id, [l_url])
     except Exception:
          print('Erro: ' + inline_query.query)
